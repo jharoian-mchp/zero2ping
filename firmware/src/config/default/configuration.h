@@ -85,6 +85,17 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
 #define SYS_TIME_TICK_FREQ_IN_HZ                    (512)
 
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+
+
+#define SYS_CONSOLE_INDEX_0                       0
+
+
+
+
 
 
 // *****************************************************************************
