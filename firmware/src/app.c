@@ -28,7 +28,7 @@
 // *****************************************************************************
 
 #include "app.h"
-
+#include "definitions.h"
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -116,20 +116,13 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            bool appInitialized = true;
-
-
-            if (appInitialized)
-            {
-
-                appData.state = APP_STATE_SERVICE_TASKS;
-            }
+            SYS_CONSOLE_MESSAGE("\n\r[Reset]\n\r");
+            appData.state = APP_STATE_SERVICE_TASKS;
             break;
         }
 
         case APP_STATE_SERVICE_TASKS:
         {
-
             break;
         }
 
