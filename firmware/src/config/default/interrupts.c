@@ -94,6 +94,7 @@ extern void OSC32KCTRL_Handler         ( void ) __attribute__((weak, alias("Dumm
 extern void SUPC_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SUPC_BODDET_Handler        ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EIC_EXTINT_0_Handler       ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EIC_EXTINT_1_Handler       ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EIC_EXTINT_2_Handler       ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -181,7 +182,6 @@ extern void TCC3_MC1_Handler           ( void ) __attribute__((weak, alias("Dumm
 extern void TCC4_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC4_MC0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC4_MC1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC0_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TC1_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TC2_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TC3_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -246,7 +246,7 @@ const H3DeviceVectors exception_table=
     .pfnSUPC_OTHER_Handler         = SUPC_OTHER_Handler,
     .pfnSUPC_BODDET_Handler        = SUPC_BODDET_Handler,
     .pfnWDT_Handler                = WDT_Handler,
-    .pfnRTC_Handler                = RTC_InterruptHandler,
+    .pfnRTC_Handler                = RTC_Handler,
     .pfnEIC_EXTINT_0_Handler       = EIC_EXTINT_0_Handler,
     .pfnEIC_EXTINT_1_Handler       = EIC_EXTINT_1_Handler,
     .pfnEIC_EXTINT_2_Handler       = EIC_EXTINT_2_Handler,
@@ -339,7 +339,7 @@ const H3DeviceVectors exception_table=
     .pfnTCC4_OTHER_Handler         = TCC4_OTHER_Handler,
     .pfnTCC4_MC0_Handler           = TCC4_MC0_Handler,
     .pfnTCC4_MC1_Handler           = TCC4_MC1_Handler,
-    .pfnTC0_Handler                = TC0_Handler,
+    .pfnTC0_Handler                = TC0_TimerInterruptHandler,
     .pfnTC1_Handler                = TC1_Handler,
     .pfnTC2_Handler                = TC2_Handler,
     .pfnTC3_Handler                = TC3_Handler,
