@@ -4003,6 +4003,17 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="APP_START_ADDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;APP_START_ADDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GCLK_ID_24_CHEN"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_24_CHEN&quot;&gt;
@@ -5701,6 +5712,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_HEAP_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1024&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;40960&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -13083,12 +13095,12 @@
          <hash>59a795ce0072896839b864efc833f6ecb71cf9034c2dc7a09ef2c67a6565bf26</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\library\tcpip\src\snmp_manager.h</file>
-         <hash>ac576c030e75310ce0040110e363c57f8819439f80a35600f05ac4ab7ed702da</hash>
-      </entry>
-      <entry>
          <file>..\src\config\default\system\system_common.h</file>
          <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\library\tcpip\src\snmp_manager.h</file>
+         <hash>ac576c030e75310ce0040110e363c57f8819439f80a35600f05ac4ab7ed702da</hash>
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\http_net.h</file>
@@ -13107,12 +13119,12 @@
          <hash>78a3d59fd1fc9c50dc84c26b76f6e8bc6b784a6713e55bed8f733e5a656afdc2</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\library\tcpip\tcpip_mac.h</file>
-         <hash>c517aafb8c11f40bf01a702af6232251e3bc8ff922282c8799f3d8abad2cfb0e</hash>
-      </entry>
-      <entry>
          <file>..\src\config\default\system\debug\sys_debug.h</file>
          <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\library\tcpip\tcpip_mac.h</file>
+         <hash>c517aafb8c11f40bf01a702af6232251e3bc8ff922282c8799f3d8abad2cfb0e</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -13167,12 +13179,12 @@
          <hash>37c8ef3979de53e7aadb9d2b3158ca55223ea67fce6660ebe968eb8d686ad75d</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\system\sys_random_h2_adapter.h</file>
-         <hash>f12e175e7261158adacd99331c8e3252491e309658e90aec6adb0ffeff5f5587</hash>
-      </entry>
-      <entry>
          <file>..\src\config\default\system\system_module.h</file>
          <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\system\sys_random_h2_adapter.h</file>
+         <hash>f12e175e7261158adacd99331c8e3252491e309658e90aec6adb0ffeff5f5587</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\nvic\plib_nvic.h</file>
@@ -13432,7 +13444,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>8c1293327a0c966c4dc4eeb1469a0b5da0c3a7096179b8f77bd7cd9e27e81d6d</hash>
+         <hash>5e60e963f0e65cfd276f4029174be35f7711f6d14d88120621ebdc694c1b451e</hash>
       </entry>
       <entry>
          <file>..\src\config\default\peripheral\cmcc\plib_cmcc.c</file>
@@ -13748,7 +13760,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\tasks.c</file>
-         <hash>40e0a26718fd5d404e1bca29e3cacb7927fc3b4570a0ab07d5e97291c02b0ca3</hash>
+         <hash>dc2d3b8751fd9070386b617987066fea14bdbcfa52f7191d8307f6d54954d515</hash>
       </entry>
       <entry>
          <file>..\src\config\default\system\time\src\sys_time_local.h</file>
@@ -13784,7 +13796,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>12f1e9017ae389d9e678c0f8949a342adf4b9998a2030505317bfdd0ef4d9871</hash>
+         <hash>ac861beb7e501ded5db91171f29c03e4f996882fd602a257cdd31e50b5f661ce</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
@@ -13983,12 +13995,12 @@
          <hash>cde51d90ee89ca0c59572a5c24f1c157ace1c156a0f0a2db51cb94fe6a657843</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\library\tcpip\src\dhcp_server_manager.h</file>
-         <hash>461db7f0b8c8a501769971a2ec777a8b83693149aee28b02c2e1d9096ea200bb</hash>
-      </entry>
-      <entry>
          <file>..\src\config\default\osal\osal_freertos.c</file>
          <hash>6f35cfd335587dd112d0ac648ae99539a5acbb98ba80ce6e8c7c855e7b8d7465</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\default\library\tcpip\src\dhcp_server_manager.h</file>
+         <hash>461db7f0b8c8a501769971a2ec777a8b83693149aee28b02c2e1d9096ea200bb</hash>
       </entry>
       <entry>
          <file>..\src\config\default\library\tcpip\src\snmp_private.h</file>
