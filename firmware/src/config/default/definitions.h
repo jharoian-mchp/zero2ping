@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/gmac/drv_gmac.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "driver/gmac/drv_gmac.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/usart/plib_sercom0_usart.h"
 #include "peripheral/port/plib_port.h"
@@ -198,9 +198,9 @@ typedef struct
 {
 
     SYS_MODULE_OBJ  drvMiim;
+    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysDebug;
 
-    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysConsole0;
 
 
