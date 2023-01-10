@@ -40,13 +40,54 @@ One option that has always existed within MPLAB Harmony v3 is the ability to dev
 
 The git log for the project shows the steps taken to bring up the layers of the project and the issues found due defaults in the framework that prevented quick and easy progress while developing from a blank project.
 
-The initial project graph needs to be built in MCC.  The picture below shows the required blocks for a static IP address and ICMP server (ping response) capability:
+The initial project graph needs to be built in MCC.  The picture below shows the required blocks for a static IP address and ICMP server (ping response) capability.
 
-![Initial Project Graph](https://raw.githubusercontent.com/jharoian-mchp/zero2ping/main/docs/PingProjectGraph.png)
+### Ping Project Graph
 
-In order for this project to generate and function correctly, the following pin assignments were made:
+![Initial Project Graph](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/PingProjectGraph.png?raw=true)
 
+In order for this project to generate and function correctly, the following pin assignments were made.
 
+### Pin Table
+
+![Pin Table](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/PinTable1.png?raw=true)
+
+### Pin Diagram
+
+![Pin Diagram](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/PinDiagram.png?raw=true)
+
+The SAME54 Xplained Pro schematics were invaluable in making sure the pin assignments were correct for the design.
+
+## Critical Steps for Success
+
+The items below are needed steps to ensure that the generated project actually functions on the hardware.  The initial generation did not show any response on the console and didn't function (no ping to the static IP address).
+
+- Add Console System Service for messaging (used SERCOM0 on pins PA04 & PA05)
+- Added static IP address in NetConfig block (instance – MAC).  Make sure this is an available IP address for your network configuration.
+- Added Debug System Service (also attached to Console) for output on why TCP/IP stack was not initializing
+- Use TCP/IP stack heap estimate to set heap for project (in System or Project Properties – linker – defaults to 1k needs 36k.  Set to 40k)
+- Don’t use RTC for time source (Using RTC ends up with divide by zero exception)
+- Connect pins for MAC to PHY based on schematic
+
+The project generated at this point will show that the TCP/IP stack initialized on the console and the board will respond to a ping at the configured static IP address. 
+
+## Add DHCP Client
+
+Adding the DHCP Client turned out to be non-eventful.  Add the block and make sure that the TCP/IP flag for auto starting DHCP is enabled.
+
+### Ping and DHCP Project Graph
+
+![Final Project Graph](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/FinalProjectGraph.png?raw=true)
+
+Once generated and downloaded to the board, the board can be pinged with board name (zero2ping) which should respond at the IP address leased by the DHCP client.  No change in the console output that indicates a change in IP address is displayed.
+
+## Tools I wish I had known about
+
+In preparing images for this README document, I discovered the TCP/IP Configuration view in MCC.  The view interacts with the MCC Project Graph and would have made configuring this project much simpler and easier to understand.
+
+![TCP/IP Configuration](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/TCPIPConfiguration.png?raw=true)
+
+Use this tool for adding more TCP/IP components.  One next step involves adding the DNS client.  Using this view should be helpful to that end.
 
 ## Resources
 
