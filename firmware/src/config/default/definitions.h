@@ -49,6 +49,16 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "peripheral/tc/plib_tc0.h"
+#include "system/time/sys_time.h"
+#include "bsp/bsp.h"
+#include "system/int/sys_int.h"
+#include "system/cache/sys_cache.h"
+#include "osal/osal.h"
+#include "system/debug/sys_debug.h"
+#include "library/tcpip/tcpip.h"
+#include "system/sys_time_h2_adapter.h"
+#include "system/sys_random_h2_adapter.h"
 #include "driver/gmac/drv_gmac.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/usart/plib_sercom0_usart.h"
@@ -57,20 +67,10 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
 #include "driver/miim/drv_miim.h"
-#include "peripheral/tc/plib_tc0.h"
-#include "system/time/sys_time.h"
-#include "bsp/bsp.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "system/int/sys_int.h"
-#include "system/cache/sys_cache.h"
-#include "osal/osal.h"
-#include "system/debug/sys_debug.h"
-#include "library/tcpip/tcpip.h"
-#include "system/sys_time_h2_adapter.h"
-#include "system/sys_random_h2_adapter.h"
 #include "app.h"
 
 
@@ -196,15 +196,15 @@ Remarks:
 
 typedef struct
 {
-
-    SYS_MODULE_OBJ  drvMiim;
     SYS_MODULE_OBJ  sysTime;
-    SYS_MODULE_OBJ  sysDebug;
-
     SYS_MODULE_OBJ  sysConsole0;
 
 
     SYS_MODULE_OBJ  tcpip;
+
+    SYS_MODULE_OBJ  drvMiim;
+    SYS_MODULE_OBJ  sysDebug;
+
 
 } SYSTEM_OBJECTS;
 

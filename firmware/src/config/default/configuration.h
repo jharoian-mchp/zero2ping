@@ -85,6 +85,11 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_WIDTH                   (16)
 #define SYS_TIME_TICK_FREQ_IN_HZ                    (1000)
 
+#define SYS_CONSOLE_INDEX_0                       0
+
+
+
+
 
 #define SYS_DEBUG_ENABLE
 #define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_DEBUG
@@ -96,11 +101,6 @@ extern "C" {
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
-
-
-#define SYS_CONSOLE_INDEX_0                       0
-
-
 
 
 
@@ -134,63 +134,6 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-/*** TCPIP MAC Configuration ***/
-#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_DUMMY				1
-#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_DUMMY				1
-#define TCPIP_GMAC_RX_BUFF_SIZE_DUMMY				    	64
-#define TCPIP_GMAC_TX_BUFF_SIZE_DUMMY				    	64
-
-		/*** QUEUE 0 TX Configuration ***/
-#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_QUE0				8
-#define TCPIP_GMAC_MAX_TX_PKT_SIZE_QUE0				    	1536
-		
-		/*** QUEUE 0 RX Configuration ***/
-#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_QUE0				8
-#define TCPIP_GMAC_RX_BUFF_SIZE_QUE0				    	1536
-#define TCPIP_GMAC_RX_DEDICATED_BUFFERS_QUE0				8
-#define TCPIP_GMAC_RX_ADDL_BUFF_COUNT_QUE0				   	2
-#define TCPIP_GMAC_RX_BUFF_COUNT_THRESHOLD_QUE0			1
-#define TCPIP_GMAC_RX_BUFF_ALLOC_COUNT_QUE0				2
-
-
-
-
-
-
-
-
-
-#define TCPIP_GMAC_RX_MAX_FRAME		    			1536
-#define TCPIP_GMAC_RX_FILTERS                       \
-                                                    TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
-                                                    TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
-                                                    TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
-                                                    TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
-													0
-#define TCPIP_GMAC_SCREEN1_COUNT_QUE							0
-#define TCPIP_GMAC_SCREEN2_COUNT_QUE							0	
-													
-#define TCPIP_GMAC_ETH_OPEN_FLAGS       			\
-                                                    TCPIP_ETH_OPEN_AUTO |\
-                                                    TCPIP_ETH_OPEN_FDUPLEX |\
-                                                    TCPIP_ETH_OPEN_HDUPLEX |\
-                                                    TCPIP_ETH_OPEN_100 |\
-                                                    TCPIP_ETH_OPEN_10 |\
-                                                    TCPIP_ETH_OPEN_MDIX_AUTO |\
-                                                    TCPIP_ETH_OPEN_RMII |\
-                                                    0
-
-#define TCPIP_INTMAC_MODULE_ID		    			GMAC_BASE_ADDRESS
-#define TCPIP_INTMAC_PERIPHERAL_CLK  				120000000
-
-#define DRV_GMAC_RX_CHKSM_OFFLOAD				(TCPIP_MAC_CHECKSUM_NONE)			
-#define DRV_GMAC_TX_CHKSM_OFFLOAD				(TCPIP_MAC_CHECKSUM_NONE)		
-#define TCPIP_GMAC_TX_PRIO_COUNT				1
-#define TCPIP_GMAC_RX_PRIO_COUNT				1
-#define DRV_GMAC_NUMBER_OF_QUEUES				1
-#define DRV_GMAC_RMII_MODE						0
-
-
 
 /*** ICMPv4 Server Configuration ***/
 #define TCPIP_STACK_USE_ICMP_SERVER
@@ -198,16 +141,21 @@ extern "C" {
 
 
 
-/*** UDP Configuration ***/
-#define TCPIP_UDP_MAX_SOCKETS		                	10
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
-#define TCPIP_UDP_USE_POOL_BUFFERS   false
-#define TCPIP_UDP_USE_TX_CHECKSUM             			true
-#define TCPIP_UDP_USE_RX_CHECKSUM             			true
-#define TCPIP_UDP_COMMANDS   false
-#define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
+/*** DHCP Configuration ***/
+#define TCPIP_STACK_USE_DHCP_CLIENT
+#define TCPIP_DHCP_TIMEOUT                          10
+#define TCPIP_DHCP_TASK_TICK_RATE                   5
+#define TCPIP_DHCP_HOST_NAME_SIZE                   20
+#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
+#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
+#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
+
+#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
+#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
+#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
+#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
 
 
 
@@ -235,13 +183,14 @@ extern "C" {
 #define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0				"zero2ping"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0				"00:04:25:1C:A0:02"
 
-#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0			"10.10.100.49"
+#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0			"192.168.100.11"
 #define TCPIP_NETWORK_DEFAULT_IP_MASK_IDX0			"255.255.255.0"
-#define TCPIP_NETWORK_DEFAULT_GATEWAY_IDX0			"10.10.100.1"
-#define TCPIP_NETWORK_DEFAULT_DNS_IDX0				"10.10.100.1"
+#define TCPIP_NETWORK_DEFAULT_GATEWAY_IDX0			"192.168.100.1"
+#define TCPIP_NETWORK_DEFAULT_DNS_IDX0				"192.168.100.1"
 #define TCPIP_NETWORK_DEFAULT_SECOND_DNS_IDX0			"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_POWER_MODE_IDX0			"full"
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS_IDX0			\
+													TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
 													TCPIP_NETWORK_CONFIG_IP_STATIC
 													
 #define TCPIP_NETWORK_DEFAULT_MAC_DRIVER_IDX0			DRV_GMAC_Object
@@ -261,12 +210,6 @@ extern "C" {
 #define DRV_ETHPHY_NEG_INIT_TMO                     1
 #define DRV_ETHPHY_NEG_DONE_TMO                     2000
 #define DRV_ETHPHY_RESET_CLR_TMO                    500
-
-
-#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
-
-
-
 
 
 
@@ -336,6 +279,82 @@ extern "C" {
 /* TCP/IP RTOS Configurations*/
 #define TCPIP_RTOS_STACK_SIZE                1024
 #define TCPIP_RTOS_PRIORITY             1
+
+
+/*** TCPIP MAC Configuration ***/
+#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_DUMMY				1
+#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_DUMMY				1
+#define TCPIP_GMAC_RX_BUFF_SIZE_DUMMY				    	64
+#define TCPIP_GMAC_TX_BUFF_SIZE_DUMMY				    	64
+
+		/*** QUEUE 0 TX Configuration ***/
+#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_QUE0				8
+#define TCPIP_GMAC_MAX_TX_PKT_SIZE_QUE0				    	1536
+		
+		/*** QUEUE 0 RX Configuration ***/
+#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_QUE0				8
+#define TCPIP_GMAC_RX_BUFF_SIZE_QUE0				    	1536
+#define TCPIP_GMAC_RX_DEDICATED_BUFFERS_QUE0				8
+#define TCPIP_GMAC_RX_ADDL_BUFF_COUNT_QUE0				   	2
+#define TCPIP_GMAC_RX_BUFF_COUNT_THRESHOLD_QUE0			1
+#define TCPIP_GMAC_RX_BUFF_ALLOC_COUNT_QUE0				2
+
+
+
+
+
+
+
+
+
+#define TCPIP_GMAC_RX_MAX_FRAME		    			1536
+#define TCPIP_GMAC_RX_FILTERS                       \
+                                                    TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
+													0
+#define TCPIP_GMAC_SCREEN1_COUNT_QUE							0
+#define TCPIP_GMAC_SCREEN2_COUNT_QUE							0	
+													
+#define TCPIP_GMAC_ETH_OPEN_FLAGS       			\
+                                                    TCPIP_ETH_OPEN_AUTO |\
+                                                    TCPIP_ETH_OPEN_FDUPLEX |\
+                                                    TCPIP_ETH_OPEN_HDUPLEX |\
+                                                    TCPIP_ETH_OPEN_100 |\
+                                                    TCPIP_ETH_OPEN_10 |\
+                                                    TCPIP_ETH_OPEN_MDIX_AUTO |\
+                                                    TCPIP_ETH_OPEN_RMII |\
+                                                    0
+
+#define TCPIP_INTMAC_MODULE_ID		    			GMAC_BASE_ADDRESS
+#define TCPIP_INTMAC_PERIPHERAL_CLK  				120000000
+
+#define DRV_GMAC_RX_CHKSM_OFFLOAD				(TCPIP_MAC_CHECKSUM_NONE)			
+#define DRV_GMAC_TX_CHKSM_OFFLOAD				(TCPIP_MAC_CHECKSUM_NONE)		
+#define TCPIP_GMAC_TX_PRIO_COUNT				1
+#define TCPIP_GMAC_RX_PRIO_COUNT				1
+#define DRV_GMAC_NUMBER_OF_QUEUES				1
+#define DRV_GMAC_RMII_MODE						0
+
+
+
+/*** UDP Configuration ***/
+#define TCPIP_UDP_MAX_SOCKETS		                	10
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
+#define TCPIP_UDP_USE_POOL_BUFFERS   false
+#define TCPIP_UDP_USE_TX_CHECKSUM             			true
+#define TCPIP_UDP_USE_RX_CHECKSUM             			true
+#define TCPIP_UDP_COMMANDS   false
+#define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
+
+
+
 
 
 
