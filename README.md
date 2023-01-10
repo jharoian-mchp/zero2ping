@@ -42,6 +42,10 @@ The git log for the project shows the steps taken to bring up the layers of the 
 
 The initial project graph needs to be built in MCC.  The picture below shows the required blocks for a static IP address and ICMP server (ping response) capability:
 
+![Initial Project Graph](https://raw.githubusercontent.com/jharoian-mchp/zero2ping/main/docs/PingProjectGraph.png)
+
+In order for this project to generate and function correctly, the following pin assignments were made:
+
 
 
 ## Resources
