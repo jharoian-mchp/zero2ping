@@ -116,7 +116,7 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            SYS_CONSOLE_MESSAGE("\n\r[Reset]\n\r");
+            SYS_CONSOLE_MESSAGE("\n\r[App Initialized]\n\r");
             appData.state = APP_STATE_SERVICE_TASKS;
             break;
         }
