@@ -65,6 +65,14 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Macros for Console_Tx pin ***/
+#define Console_Tx_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 4U)) & 0x01U)
+#define Console_Tx_PIN                  PORT_PIN_PA04
+
+/*** Macros for Console_Rx pin ***/
+#define Console_Rx_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 5U)) & 0x01U)
+#define Console_Rx_PIN                  PORT_PIN_PA05
+
 // *****************************************************************************
 /* PORT Group
 

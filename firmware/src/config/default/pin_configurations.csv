@@ -15,8 +15,8 @@
 18,PB07,,Available,,,,,,NORMAL
 19,PB08,,Available,,,,,,NORMAL
 20,PB09,,Available,,,,,,NORMAL
-21,PA04,,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
-22,PA05,,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+21,PA04,Console_Tx,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+22,PA05,Console_Rx,SERCOM0_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
 23,PA06,,Available,,,,,,NORMAL
 24,PA07,,Available,,,,,,NORMAL
 27,PC04,,Available,,,,,,NORMAL
