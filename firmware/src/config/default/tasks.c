@@ -59,16 +59,6 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-
-void _TCPIP_STACK_Task(  void *pvParameters  )
-{
-    while(1)
-    {
-        TCPIP_STACK_Task(sysObj.tcpip);
-        vTaskDelay(1 / portTICK_PERIOD_MS);
-    }
-}
-
 /* Handle for the APP_Tasks. */
 TaskHandle_t xAPP_Tasks;
 
@@ -79,6 +69,26 @@ void _APP_Tasks(  void *pvParameters  )
         APP_Tasks();
     }
 }
+
+
+void _TCPIP_STACK_Task(  void *pvParameters  )
+{
+    while(1)
+    {
+        TCPIP_STACK_Task(sysObj.tcpip);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
+    }
+}
+
+void _SYS_CMD_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        SYS_CMD_Tasks();
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
 
 
 void _DRV_MIIM_Task(  void *pvParameters  )
@@ -93,6 +103,16 @@ void _DRV_MIIM_Task(  void *pvParameters  )
        
         vTaskDelay(1 / portTICK_PERIOD_MS);
        
+    }
+}
+
+
+void _NET_PRES_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        NET_PRES_Tasks(sysObj.netPres);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
     }
 }
 
@@ -117,6 +137,16 @@ void SYS_Tasks ( void )
     /* Maintain system services */
     
 
+    xTaskCreate( _SYS_CMD_Tasks,
+        "SYS_CMD_TASKS",
+        SYS_CMD_RTOS_STACK_SIZE,
+        (void*)NULL,
+        SYS_CMD_RTOS_TASK_PRIORITY,
+        (TaskHandle_t*)NULL
+    );
+
+
+
 
     /* Maintain Device Drivers */
         xTaskCreate( _DRV_MIIM_Task,
@@ -137,6 +167,16 @@ void SYS_Tasks ( void )
         TCPIP_RTOS_STACK_SIZE,
         (void*)NULL,
         TCPIP_RTOS_PRIORITY,
+        (TaskHandle_t*)NULL
+    );
+
+
+
+    xTaskCreate( _NET_PRES_Tasks,
+        "NET_PRES_Tasks",
+        NET_PRES_RTOS_STACK_SIZE,
+        (void*)NULL,
+        NET_PRES_RTOS_TASK_PRIORITY,
         (TaskHandle_t*)NULL
     );
 

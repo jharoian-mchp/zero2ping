@@ -91,6 +91,16 @@ extern "C" {
 
 
 
+#define SYS_CMD_ENABLE
+#define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
+#define SYS_CMD_PRINT_BUFFER_SIZE          1024
+#define SYS_CMD_BUFFER_DMA_READY
+
+/* Command System Service RTOS Configurations*/
+#define SYS_CMD_RTOS_STACK_SIZE                256
+#define SYS_CMD_RTOS_TASK_PRIORITY             1
+
+
 #define SYS_DEBUG_ENABLE
 #define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_DEBUG
 #define SYS_DEBUG_BUFFER_DMA_READY
@@ -219,6 +229,11 @@ extern "C" {
 
 
 
+	/*** tcpip_cmd Configuration ***/
+	#define TCPIP_STACK_COMMAND_ENABLE
+
+
+
 /* Network Configuration Index 0 */
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "GMAC"
 #define TCPIP_IF_GMAC  
@@ -249,6 +264,24 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8091_NEG_INIT_TMO            1
 #define DRV_ETHPHY_KSZ8091_NEG_DONE_TMO            2000
 #define DRV_ETHPHY_KSZ8091_RESET_CLR_TMO           500
+
+
+
+/*** telnet Configuration ***/
+#define TCPIP_STACK_USE_TELNET_SERVER
+#define TCPIP_TELNET_MAX_CONNECTIONS    2
+#define TCPIP_TELNET_TASK_TICK_RATE     100
+#define TCPIP_TELNET_SKT_TX_BUFF_SIZE   0
+#define TCPIP_TELNET_SKT_RX_BUFF_SIZE   0
+#define TCPIP_TELNET_LISTEN_PORT        23
+#define TCPIP_TELNET_PRINT_BUFF_SIZE    200
+#define TCPIP_TELNET_LINE_BUFF_SIZE     80
+#define TCPIP_TELNET_USERNAME_SIZE      15
+#define TCPIP_TELNET_CONFIG_FLAGS       \
+                                       TCPIP_TELNET_FLAG_NONE
+
+#define TCPIP_TELNET_OBSOLETE_AUTHENTICATION false
+#define TCPIP_TELNET_AUTHENTICATION_CONN_INFO true
 
 
 
@@ -431,6 +464,16 @@ extern "C" {
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
+
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 10
+
+/* Net Pres RTOS Configurations*/
+#define NET_PRES_RTOS_STACK_SIZE                1024
+#define NET_PRES_RTOS_TASK_PRIORITY             1
+	
+
 
 #define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
 

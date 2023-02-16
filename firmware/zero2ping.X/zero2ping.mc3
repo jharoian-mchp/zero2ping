@@ -50,11 +50,19 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>net_Pres</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>nvmctrl</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
          <string>sercom0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>sys_command</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -79,6 +87,10 @@
       </entry>
       <entry>
          <string>tcpipArp</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>tcpipCmd</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -111,6 +123,10 @@
       </entry>
       <entry>
          <string>tcpipTcp</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>tcpipTelnet</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -1271,11 +1287,11 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_SYS_RESET&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -3805,7 +3821,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;RESET_DEF&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3818,7 +3834,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;RESET_HEADER&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3831,7 +3847,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;RESET_MAPPING&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -3987,8 +4003,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;637&quot; canvasWidth=&quot;633&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_SAM_E54_Xplained_Pro&quot; x=&quot;463&quot; y=&quot;4&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;FreeRTOS&quot; x=&quot;336&quot; y=&quot;26&quot;/&gt;
@@ -4002,23 +4017,28 @@
         &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;evsys&quot; x=&quot;0&quot; y=&quot;4&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;lib_crypto&quot; x=&quot;410&quot; y=&quot;520&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;240&quot; y=&quot;555&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;nvmctrl&quot; x=&quot;0&quot; y=&quot;44&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;sercom0&quot; x=&quot;0&quot; y=&quot;185&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sys_console&quot; x=&quot;151&quot; y=&quot;122&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_debug&quot; x=&quot;338&quot; y=&quot;291&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sys_time&quot; x=&quot;526&quot; y=&quot;48&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tc0&quot; x=&quot;339&quot; y=&quot;93&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;tcpipArp&quot; x=&quot;0&quot; y=&quot;305&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;tcpipDhcp&quot; x=&quot;527&quot; y=&quot;166&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;tcpipDns&quot; x=&quot;510&quot; y=&quot;300&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;tcpipIPv4&quot; x=&quot;103&quot; y=&quot;305&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;tcpipIcmp&quot; x=&quot;206&quot; y=&quot;306&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tcpipNetConfig&quot; x=&quot;241&quot; y=&quot;413&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;24&quot; id=&quot;tcpipStack&quot; x=&quot;339&quot; y=&quot;158&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;25&quot; id=&quot;tcpipTcp&quot; x=&quot;517&quot; y=&quot;408&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;26&quot; id=&quot;tcpipUdp&quot; x=&quot;384&quot; y=&quot;412&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;net_Pres&quot; x=&quot;670&quot; y=&quot;400&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;nvmctrl&quot; x=&quot;0&quot; y=&quot;44&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sercom0&quot; x=&quot;0&quot; y=&quot;185&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_command&quot; x=&quot;650&quot; y=&quot;280&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sys_console&quot; x=&quot;151&quot; y=&quot;122&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sys_debug&quot; x=&quot;338&quot; y=&quot;291&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;sys_time&quot; x=&quot;526&quot; y=&quot;48&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;tc0&quot; x=&quot;339&quot; y=&quot;93&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;tcpipArp&quot; x=&quot;0&quot; y=&quot;305&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;tcpipCmd&quot; x=&quot;670&quot; y=&quot;180&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;tcpipDhcp&quot; x=&quot;527&quot; y=&quot;166&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tcpipDns&quot; x=&quot;510&quot; y=&quot;300&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;24&quot; id=&quot;tcpipIPv4&quot; x=&quot;103&quot; y=&quot;305&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;25&quot; id=&quot;tcpipIcmp&quot; x=&quot;206&quot; y=&quot;306&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;26&quot; id=&quot;tcpipNetConfig&quot; x=&quot;241&quot; y=&quot;413&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;27&quot; id=&quot;tcpipStack&quot; x=&quot;339&quot; y=&quot;158&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;28&quot; id=&quot;tcpipTcp&quot; x=&quot;517&quot; y=&quot;408&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;29&quot; id=&quot;tcpipTelnet&quot; x=&quot;700&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;30&quot; id=&quot;tcpipUdp&quot; x=&quot;384&quot; y=&quot;412&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;714&quot; canvasWidth=&quot;833&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -9248,6 +9268,512 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot;/&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CERT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CERT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CERT_REPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CERT_REPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_CERT_FILENAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_CERT_FILENAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_CERT_FORMAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_CERT_FORMAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_CERT_LEN_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_CERT_LEN_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_CERT_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_CERT_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_DEVICE_CERT_LEN_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_DEVICE_CERT_LEN_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_DEVICE_CERT_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_DEVICE_CERT_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_DEVICE_PVT_KEY_LEN_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_DEVICE_PVT_KEY_LEN_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_DEVICE_PVT_KEY_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_DEVICE_PVT_KEY_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_IS_DEVICE_CERT_CHAIN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_IS_DEVICE_CERT_CHAIN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_FILENAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_FILENAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_FORMAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_FORMAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_MUTUAL_AUTH_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_CLIENT_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_CLIENT_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_ENABLE_ATECC_TNGTLS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_ENABLE_ATECC_TNGTLS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_ENABLE_PEER_CERT_VERIFICATION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_ENABLE_PEER_CERT_VERIFICATION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_CERT_FILENAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_CERT_FILENAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_CERT_FORMAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_CERT_FORMAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_CERT_LEN_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_CERT_LEN_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_CERT_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_CERT_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_KEY_FILENAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_KEY_FILENAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_KEY_LEN_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_KEY_LEN_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_KEY_VARIABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_KEY_VARIABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_BLOB_SERVER_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_BLOB_SERVER_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_CERT_STORE_STUBS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_CERT_STORE_STUBS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_CERT_STORE_STUBS_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_CERT_STORE_STUBS_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_CERT_STORE_STUBS_SERVER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_CERT_STORE_STUBS_SERVER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_ENC_PROVIDE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_ENC_PROVIDE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_GENERATE_ENC_STUBS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_GENERATE_ENC_STUBS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_NEEDED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_NEEDED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_RTOS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_RTOS_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_RTOS_STACK_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_STACK_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_RTOS_TASK_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_TASK_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_RTOS_USE_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_USE_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SOCKETS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SOCKETS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_ALPN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_ALPN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_ALPN_PROTOCOL_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_ALPN_PROTOCOL_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_CLIENT_ENC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_CLIENT_ENC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_DATAGRAM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_DATAGRAM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_DATAGRAM_ENC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_DATAGRAM_ENC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_ENCRYPTION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_ENCRYPTION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_SERVER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_SERVER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_SERVER_ENC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_SERVER_ENC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_SNI"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_SNI&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_SNI_HOST_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_SNI_HOST_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_STREAM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_STREAM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_SUPPORT_STREAM_ENC"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_SUPPORT_STREAM_ENC&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_TRANSPORT_AS_TCPIP"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_TRANSPORT_AS_TCPIP&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_USE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_USE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_USE_WOLF_SSL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_USE_WOLF_SSL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_USE_WOLF_SSL_DEBUG_LOG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_USE_WOLF_SSL_DEBUG_LOG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="NET_PRES_USE_WOLF_SSL_DEBUG_LOG_BUFFERS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;net_Pres&gt;
+  &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_USE_WOLF_SSL_DEBUG_LOG_BUFFERS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/net_Pres&gt;
+&lt;/net_Pres&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvmctrl" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
@@ -10403,6 +10929,187 @@
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/sercom0&gt;
 &lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;sys_command_SYS_CONSOLE_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;sys_console_0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;sys_console&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_MAX_CMD_ARGS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_MAX_CMD_ARGS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_MAX_CMD_GROUPS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_MAX_CMD_GROUPS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_MAX_CMD_LENGTH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_MAX_CMD_LENGTH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_PRINT_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_PRINT_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_STACK_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_STACK_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_MSG_QTY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_MSG_QTY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_OPT_NONE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_OPT_NONE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_OPT_NO_TLS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_OPT_NO_TLS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_OPT_SAVE_FP"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_OPT_SAVE_FP&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_OPT_STK_CHK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_OPT_STK_CHK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_OPT_STK_CLR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_OPT_STK_CLR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_PRIORITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_PRIORITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_TASK_TIME_QUANTA"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_TASK_TIME_QUANTA&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_RTOS_USE_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_RTOS_USE_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_CONSOLE_DEVICE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_CONSOLE_DEVICE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_command&quot; value=&quot;SYS_CONSOLE_0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_CONSOLE_INDEX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_CONSOLE_INDEX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_command&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
 </value>
       </entry>
       <entry>
@@ -11669,6 +12376,35 @@
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/tcpipArp&gt;
 &lt;/tcpipArp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipCmd" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipCmd&gt;
+  &lt;tcpipCmd dnOrder=&quot;0&quot;/&gt;
+&lt;/tcpipCmd&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipCmd" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipCmd" name="TCPIP_STACK_COMMANDS_STORAGE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipCmd&gt;
+  &lt;tcpipCmd dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_COMMANDS_STORAGE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipCmd&gt;
+&lt;/tcpipCmd&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipCmd" name="TCPIP_STACK_USE_COMMANDS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipCmd&gt;
+  &lt;tcpipCmd dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_COMMANDS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipCmd&gt;
+&lt;/tcpipCmd&gt;
 </value>
       </entry>
       <entry>
@@ -14655,7 +15391,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTcp" name="TCPIP_TCP_HEAP_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTcp&gt;
   &lt;tcpipTcp dnOrder=&quot;0&quot; id=&quot;TCPIP_TCP_HEAP_SIZE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipTcp&quot; value=&quot;11560&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tcpipTcp&gt;
 &lt;/tcpipTcp&gt;
 </value>
@@ -14784,6 +15522,161 @@
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/tcpipTcp&gt;
 &lt;/tcpipTcp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot;/&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_AUTHENTICATION_CONN_INFO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_AUTHENTICATION_CONN_INFO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_AUTH_CONFIG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_AUTH_CONFIG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_CONFIG_FLAG_NO_DELAY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_CONFIG_FLAG_NO_DELAY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_CONFIG_PASS_CONTROL_CHARS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_CONFIG_PASS_CONTROL_CHARS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_HEAP_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_HEAP_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_LINE_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_LINE_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_LISTEN_PORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_LISTEN_PORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_MAX_CONNECTIONS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_MAX_CONNECTIONS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_PASSWORD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_PASSWORD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_PRINT_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_PRINT_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_SKT_RX_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_SKT_RX_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_SKT_TX_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_SKT_TX_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_TASK_TICK_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_TASK_TICK_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_USERNAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_USERNAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_TELNET_USERNAME_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_TELNET_USERNAME_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipTelnet" name="TCPIP_USE_TELNET"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipTelnet&gt;
+  &lt;tcpipTelnet dnOrder=&quot;0&quot; id=&quot;TCPIP_USE_TELNET&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipTelnet&gt;
+&lt;/tcpipTelnet&gt;
 </value>
       </entry>
       <entry>
@@ -14998,7 +15891,7 @@
       </entry>
       <entry>
          <file>../src/config/default/definitions.h</file>
-         <hash>61a339c44914e56e6e9f39eb68f698f9869d2a6f12a6c1eb473dd1b88024bd32</hash>
+         <hash>46a894d9e54fad52aae8765393c1fff4bff072df20c3bed0aa324c5ee66940f3</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/camellia.h</file>
@@ -15093,12 +15986,12 @@
          <hash>f7d57f3fec22d69b2bfd372d6921a340f6684974503c1fae9d485960443fa527</hash>
       </entry>
       <entry>
-         <file>../src/config/default/library/tcpip/src/ndp_manager.h</file>
-         <hash>78e9cba200202b4b38ab827c1edda4139357e43a9e3b1a49a75d6da685013ec7</hash>
-      </entry>
-      <entry>
          <file>../src/config/default/osal/osal_definitions.h</file>
          <hash>6dc49e317b4557c5516a172c1437125874abd98ffcc7260e3422966078dcef7f</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/library/tcpip/src/ndp_manager.h</file>
+         <hash>78e9cba200202b4b38ab827c1edda4139357e43a9e3b1a49a75d6da685013ec7</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha_hw.h</file>
@@ -15329,12 +16222,12 @@
          <hash>9ee172d7931c0bad77a30764a9ce687bf0ad2ee06ef404c0fbde95db597a7702</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_CondCopy_pb.h</file>
-         <hash>e99baec77bebcc5e59095de299f823842ee88813e63925e50fa5099d3921c0b5</hash>
-      </entry>
-      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_cf_pb.h</file>
          <hash>adbd890d0d6adb6e6b4e52dfc2b94c74bc0913294f1857a78bb69e38040f6e2c</hash>
+      </entry>
+      <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_CondCopy_pb.h</file>
+         <hash>e99baec77bebcc5e59095de299f823842ee88813e63925e50fa5099d3921c0b5</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha.h</file>
@@ -15541,6 +16434,10 @@
          <hash>b5b919e20cc70b4636a3b3db9ddaa65c503c905ac8d31830ba309f11c39b2177</hash>
       </entry>
       <entry>
+         <file>../src/config/default/library/tcpip/src/telnet.c</file>
+         <hash>6e6e89bf1ef6ced43832ba732b2c05a40ee51adb1815ee84e7d4e2a585e61bee</hash>
+      </entry>
+      <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_packet.h</file>
          <hash>b2bab188e1344906cab66ae46de007bbe18c04e30bfd12aaece99552ddc9d568</hash>
       </entry>
@@ -15617,12 +16514,12 @@
          <hash>671752c5b24ca5cd9619e04f5b6d503f29d800ddf4f58f32cc7b327d1328f406</hash>
       </entry>
       <entry>
-         <file>../src/config/default/library/tcpip/tcpip_commands.h</file>
-         <hash>8f3b214a2ce0448285cf00164b921664e0264503816e32ddfa99c8483e3fd187</hash>
+         <file>../src/config/default/configuration.h</file>
+         <hash>faf97a4e8009730d851aff4cb83ac502bd64a08552a92e6f11494187e5acee0e</hash>
       </entry>
       <entry>
-         <file>../src/config/default/configuration.h</file>
-         <hash>9fb4f73e2ff34ca8bd9832a6aab122263049535c4b00bc6ddd77603bb6788481</hash>
+         <file>../src/config/default/library/tcpip/tcpip_commands.h</file>
+         <hash>8f3b214a2ce0448285cf00164b921664e0264503816e32ddfa99c8483e3fd187</hash>
       </entry>
       <entry>
          <file>../src/config/default/osal/osal_freertos.h</file>
@@ -15801,16 +16698,20 @@
          <hash>b8de6ed81a465dce435204d7ae1b926c1f412355e33c54c0a244b177b5a4eb09</hash>
       </entry>
       <entry>
-         <file>../src/config/default/library/tcpip/src/lldp_manager.h</file>
-         <hash>887cfb57ab0dce277c710796a390ba2a41137109b5f1d9b3fdae868d3a79f938</hash>
-      </entry>
-      <entry>
          <file>../src/config/default/system/int/sys_int.h</file>
          <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
       </entry>
       <entry>
+         <file>../src/config/default/library/tcpip/src/lldp_manager.h</file>
+         <hash>887cfb57ab0dce277c710796a390ba2a41137109b5f1d9b3fdae868d3a79f938</hash>
+      </entry>
+      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_encrypt.c</file>
          <hash>fd89ce222eb48c9405c9451c75fa05dbd68f1858b9036de00dbf6e2d43db181f</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/system/command/sys_command.h</file>
+         <hash>8d8b4c4f428355afecc0771ff799785869386e7cfb079e327773628226ee2e2d</hash>
       </entry>
       <entry>
          <file>../src/config/default/system/debug/src/sys_debug_local.h</file>
@@ -15902,7 +16803,7 @@
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/tcpip.h</file>
-         <hash>6d2db14f41b4efa43504dd9177c6090cce11240130defcad0ea90d810dd80245</hash>
+         <hash>0f141a8e4e6eb968e51bbe140dda90487947f985226a1482587c110a66bfce9f</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ZpEccAdd_pb.h</file>
@@ -15923,6 +16824,10 @@
       <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_heap_alloc.c</file>
          <hash>e8b40b862134651ad7b7863b9b9f74a978f1497ee642134a06ca89eec4fa208d</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/net_pres/pres/net_pres_certstore.h</file>
+         <hash>cc403a4f7e765aa1e0847fb30ec4f018935191c3955ebeddc551ff24fc906eaf</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_notify.h</file>
@@ -15985,6 +16890,10 @@
          <hash>0e865b6f557ed6f7e89005ddb24e9137b34b77b9e5fa6f1e438764692c6a8e79</hash>
       </entry>
       <entry>
+         <file>../src/config/default/system/reset/sys_reset.c</file>
+         <hash>e671888007ee4e0355beae1e361ff894dc2bc4fa0a4614d6975b18c5ce057181</hash>
+      </entry>
+      <entry>
          <file>../src/config/default/library/tcpip/icmpv6.h</file>
          <hash>4773bf4089ddf7589768e9e866544887ba0ab58200a8a37e032ea66c8181e129</hash>
       </entry>
@@ -15995,6 +16904,10 @@
       <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_manager.c</file>
          <hash>f4b3eba77d17b0b442c07a75318949aaaa68ac7dd15bc46f1b8df92aab2c0068</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/system/reset/sys_reset.h</file>
+         <hash>962efce739387d25aacb5dc3aa90e90f216a478bcf19b57237540fd72bce2748</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/zero_conf_helper.h</file>
@@ -16310,7 +17223,7 @@
       </entry>
       <entry>
          <file>../src/config/default/initialization.c</file>
-         <hash>be43a3780003cf4099c4dc09efccc865164a51edaa9841988438bfd406044d53</hash>
+         <hash>d1a63d74be2c96159183c17a9c91d9ff13a02c553905e687e02d9f3af4d6a396</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAME54P20A_DFP/component/tcc.h</file>
@@ -16367,6 +17280,10 @@
       <entry>
          <file>../src/config/default/ATSAME54P20A.ld</file>
          <hash>5376ca76ffc77cfc847cf381be187aee4ec4bbc9bf8269ee8c54019750744638</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/library/tcpip/src/tcpip_commands.c</file>
+         <hash>d1f8eb59c664093bef227c773ae5fa9f604232d8938760bba060264cfdddb2b2</hash>
       </entry>
       <entry>
          <file>../src/config/default/system_definitions.h</file>
@@ -16477,6 +17394,10 @@
          <hash>7aa8d74276b6835242881fc6a778f3344b7b2d41dc02430f9b114637908ba9da</hash>
       </entry>
       <entry>
+         <file>../src/config/default/system/command/src/sys_command.c</file>
+         <hash>f6ffa260b5a6f1e0134c8845c405d0e21dcdc5fd02e95dcc7a4a5fccf1cb23ae</hash>
+      </entry>
+      <entry>
          <file>../src/packs/ATSAME54P20A_DFP/component/sercom.h</file>
          <hash>7962b585227a8dccadbf1827cf3acb709c7551dd50bb0caa7989ae5bdfa256d9</hash>
       </entry>
@@ -16490,7 +17411,7 @@
       </entry>
       <entry>
          <file>../src/config/default/tasks.c</file>
-         <hash>e659f1f0c2c936260e8a1c7d103f5359741d46e56a31767c6f4f95c1976a07d9</hash>
+         <hash>09a1e3f533734403e06b278351ef8a463eb0e463718c16da6c6d096bf8c84660</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/ftpc_private.h</file>
@@ -16605,12 +17526,12 @@
          <hash>3b6066af8a9c4f214c9c600861386f40a0f36da90372e9ff4dc0b926a9642d76</hash>
       </entry>
       <entry>
-         <file>../src/config/default/library/tcpip/src/udp_private.h</file>
-         <hash>a059c9d2feb6ede167acc5f653f4e42cb56e343fe78c436f26ba2c2bbc0bc08d</hash>
-      </entry>
-      <entry>
          <file>../src/config/default/osal/osal.h</file>
          <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/library/tcpip/src/udp_private.h</file>
+         <hash>a059c9d2feb6ede167acc5f653f4e42cb56e343fe78c436f26ba2c2bbc0bc08d</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_pkcs11.h</file>
@@ -16623,6 +17544,10 @@
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/types.h</file>
          <hash>eb1d62cdb2b2480abb2acf7168a57e93000347feb18aa2f6cb162cbfb89a655e</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h</file>
+         <hash>be6f4e79336d95d5b50ab2ac4486310d0cf3958ed95e47ccb90ecf237b6c8bc7</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/tftps_private.h</file>
@@ -16727,6 +17652,10 @@
       <entry>
          <file>../src/packs/ATSAME54P20A_DFP/instance/can0.h</file>
          <hash>5e54c238136765f6f7b588e00eee3d377b4df1dfee50641ca762df33b5e4191d</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/net_pres/pres/src/net_pres_local.h</file>
+         <hash>712db0a8f6e4a4adc2775a84c5e4a4a8e5773eb893758846ab0cf75ab87986f0</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAME54P20A_DFP/instance/tcc1.h</file>
@@ -17077,12 +18006,20 @@
          <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
       </entry>
       <entry>
+         <file>../src/config/default/net_pres/pres/net_pres_cert_store.c</file>
+         <hash>52c53d137ee4f282e755203a89cb211e29a5c9057b6d0d0f37bac79e17ae1ce8</hash>
+      </entry>
+      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/pic32mz-crypt.c</file>
          <hash>fed3e8f5e982656e5dfd3a703d677a8595cb73b8425a59474c2a4050a531db79</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAME54P20A_DFP/component/usb.h</file>
          <hash>3bc3730edcc123e89557c8e54bd3b2f84bc57567d6b7fc54e1df27cbc0738e99</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/net_pres/pres/src/net_pres.c</file>
+         <hash>9d12c8e4f2584ad099f86d7f62ebedb4c4ec60481e8b21b478c0717a5b5deb16</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/snmp_private.h</file>
@@ -17149,6 +18086,10 @@
          <hash>03856082ee9cf050e710fd60a2edd162cc748b2cff5bea7b9ff889226afa47a3</hash>
       </entry>
       <entry>
+         <file>../src/config/default/net_pres/pres/net_pres_enc_glue.c</file>
+         <hash>81bb134a5defb7a7440db839ec62c92971fe9e54e02a87436787c53ee3169831</hash>
+      </entry>
+      <entry>
          <file>../src/packs/ATSAME54P20A_DFP/instance/ccl.h</file>
          <hash>a9aa5e1eef743d9b44cedab5ef673265dd76edd1ea52991b67d71e4bd4eac7ce</hash>
       </entry>
@@ -17161,12 +18102,16 @@
          <hash>621937ef00579bc65a507ae3f380751399ec465963415917a7ce4e0dbddc3eb4</hash>
       </entry>
       <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ClearFlags_pb.h</file>
+         <hash>d4d6010f2c736d325c8f5f0f9fdadcff2395c698424f2d095480fe4a93e8d516</hash>
+      </entry>
+      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_Rc_pb.h</file>
          <hash>a1adb4fe4adb4c133e30e3815335162c4fd43379aa87eafe849ff9c99a43dc92</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ClearFlags_pb.h</file>
-         <hash>d4d6010f2c736d325c8f5f0f9fdadcff2395c698424f2d095480fe4a93e8d516</hash>
+         <file>../src/config/default/net_pres/pres/net_pres_enc_glue.h</file>
+         <hash>9293545cb02dddbae87ae3907beb879a80391e085f0542daa99492760954983c</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_RedMod_pb.h</file>
@@ -17186,7 +18131,7 @@
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_private.h</file>
-         <hash>f897b569beb615b70dcd06f6c819e9c4c26f52fc7beef720a62de00d0ebe87ae</hash>
+         <hash>847aec87fd48c7e90cb7964aa1b06fd640cce328fa4fac64209640a7cc0543d4</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/iperf_manager.h</file>
@@ -17203,6 +18148,10 @@
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_GCD_pb.h</file>
          <hash>ee5926fe6e9d7a4970020a77bd37709df250adfbd638a48096031d1f92a1bd00</hash>
+      </entry>
+      <entry>
+         <file>../src/config/default/net_pres/pres/net_pres_transportapi.h</file>
+         <hash>08f63f7d29a705d8803eb0b33a559bb33c4f570c731b2cd09425a67ddea4beee</hash>
       </entry>
       <entry>
          <file>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</file>
@@ -17305,12 +18254,12 @@
          <hash>aa2bdc8321bd2bbc2b22c2f128dfeb347df622da1f3c8a7e3999f289deb5811d</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c</file>
-         <hash>909b7cba34135b1701510679dca8f22095c0882ddb61a402049cdc854e73aaac</hash>
-      </entry>
-      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_arm64.c</file>
          <hash>3b08fe7da3b9fe1dcc5f2aee53e11b00d6d5425d054d751b3abe444a2a9ac380</hash>
+      </entry>
+      <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c</file>
+         <hash>909b7cba34135b1701510679dca8f22095c0882ddb61a402049cdc854e73aaac</hash>
       </entry>
       <entry>
          <file>../src/config/default/system/debug/sys_debug.h</file>
