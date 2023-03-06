@@ -1,10 +1,14 @@
-# Zero2Ping
+# Zero2Ping + telnet
 
 Often the first step of using a TCP/IP stack involves obtaining an IP address from a DHCP server on the network and being able to ping the board from the developer's computer.  Zero2Ping documents that journey for the TCP/IP stack within the MPLAB Harmony v3 framework using the SAME54 Xplained Pro evaluation board.
 
 A minimal project like Zero2Ping is important for a couple of reasons.  One, MCC does not allow for migration of a project from one processor to another.  Two, most of the demos are point solutions that do not have ICMP server or DHCP client enabled.  Three, discerning the difference between necessary application code and the stack functionality is not clear.  What can be removed and where do I start with my application?  Four, due to a lack of ability to move a demo project to your own hardware, the value of the demo is limited.
 
 Based on all of the above, what is needed are clear instructions on how to build a MPLAB Harmony v3 TCP/IP project from a blank project as this is the first thing everyone does with their custom hardware.  The Zero2Ping project demonstrates that ICMP server and DHCP client require **no** application code to function. 
+
+## Adding telnet
+
+The telnet branch starts from the Zero2Ping main branch and adds the required modules for telnet.  Currently, this project does not contain a TLS provider as it is not required for a telnet server that responds on port 23.
 
 ## Building the Project
 
@@ -16,8 +20,8 @@ MPLAB Harmony has evolved over the past few years into its current state.  The f
 
 
 project: zero2ping
-creation_date: 2023-01-09T16:26:31.452-08:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 10
+creation_date: 2023-02-16T12:32:36.525-08:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Linux
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.2.2
 mcc_core_version: v5.4.14
@@ -26,11 +30,13 @@ harmony_version: v1.2.0
 compiler: XC32 (v4.21) 
 
 modules:
-    - {name: "csp", version: "v3.14.0"}
+    - {name: "csp", version: "v3.15.0"}
     - {name: "core", version: "v3.11.1"}
-    - {name: "dev_packs", version: "v3.14.0"}
-    - {name: "net", version: "v3.8.0"}
-    - {name: "bsp", version: "v3.14.0"}
+    - {name: "dev_packs", version: "v3.15.1"}
+    - {name: "wolfssl", version: "v4.7.0"}
+    - {name: "net", version: "v3.9.0"}
+    - {name: "bsp", version: "v3.15.0"}
+    - {name: "crypto", version: "v3.7.6"}
     - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
 ```
 
