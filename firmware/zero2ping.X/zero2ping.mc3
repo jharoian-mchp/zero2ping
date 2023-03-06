@@ -1,4 +1,4 @@
-<config configName="default" projectName="zero2ping" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
+<config configName="default" projectName="zero2ping" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -119,7 +119,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.2.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -15258,7 +15258,7 @@
       </entry>
       <entry>
          <file>../src/config/default/startup_xc32.c</file>
-         <hash>5fa956deadc84b3c95c31673a48d5567320f5a2e5e789e6a98efea5673645c51</hash>
+         <hash>fde3e87fef83701bb7f4acdf267440f4b1b425a9f32c61045c7e641e88d7eff1</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/sp.h</file>
@@ -15417,12 +15417,12 @@
          <hash>fd7749dc74a885efd7c593394454abc74afc7cf184123f0315425a3600c26ac5</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/md4.h</file>
-         <hash>dcb53805a0f8a2db11b5694b6ee21174156f49b49897b07ed4bdde580c95748f</hash>
-      </entry>
-      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/fe_operations.h</file>
          <hash>f01ad06013976735c7e2e56108837528bfaae06b2403fc02692683dccac6efa5</hash>
+      </entry>
+      <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/md4.h</file>
+         <hash>dcb53805a0f8a2db11b5694b6ee21174156f49b49897b07ed4bdde580c95748f</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAME54P20A_DFP/instance/adc0.h</file>
@@ -17161,12 +17161,12 @@
          <hash>621937ef00579bc65a507ae3f380751399ec465963415917a7ce4e0dbddc3eb4</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_Rc_pb.h</file>
-         <hash>a1adb4fe4adb4c133e30e3815335162c4fd43379aa87eafe849ff9c99a43dc92</hash>
-      </entry>
-      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ClearFlags_pb.h</file>
          <hash>d4d6010f2c736d325c8f5f0f9fdadcff2395c698424f2d095480fe4a93e8d516</hash>
+      </entry>
+      <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_Rc_pb.h</file>
+         <hash>a1adb4fe4adb4c133e30e3815335162c4fd43379aa87eafe849ff9c99a43dc92</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_RedMod_pb.h</file>
@@ -17305,12 +17305,12 @@
          <hash>aa2bdc8321bd2bbc2b22c2f128dfeb347df622da1f3c8a7e3999f289deb5811d</hash>
       </entry>
       <entry>
-         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c</file>
-         <hash>909b7cba34135b1701510679dca8f22095c0882ddb61a402049cdc854e73aaac</hash>
-      </entry>
-      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_arm64.c</file>
          <hash>3b08fe7da3b9fe1dcc5f2aee53e11b00d6d5425d054d751b3abe444a2a9ac380</hash>
+      </entry>
+      <entry>
+         <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/asn.c</file>
+         <hash>909b7cba34135b1701510679dca8f22095c0882ddb61a402049cdc854e73aaac</hash>
       </entry>
       <entry>
          <file>../src/config/default/system/debug/sys_debug.h</file>
