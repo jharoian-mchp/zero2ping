@@ -229,8 +229,8 @@
               <itemPath>../src/config/default/system/console/src/sys_console_local.h</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/default/system/debug/sys_debug.h</itemPath>
               <itemPath>../src/config/default/system/debug/src/sys_debug_local.h</itemPath>
+              <itemPath>../src/config/default/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/default/system/int/sys_int.h</itemPath>
@@ -241,24 +241,24 @@
               <itemPath>../src/config/default/system/time/sys_time.h</itemPath>
               <itemPath>../src/config/default/system/time/sys_time_definitions.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/default/system/system.h</itemPath>
             <itemPath>../src/config/default/system/sys_random_h2_adapter.h</itemPath>
+            <itemPath>../src/config/default/system/sys_time_h2_adapter.h</itemPath>
+            <itemPath>../src/config/default/system/system.h</itemPath>
             <itemPath>../src/config/default/system/system_module.h</itemPath>
             <itemPath>../src/config/default/system/system_common.h</itemPath>
-            <itemPath>../src/config/default/system/sys_time_h2_adapter.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/default/system_definitions.h</itemPath>
           <itemPath>../src/config/default/system_config.h</itemPath>
           <itemPath>../src/config/default/device.h</itemPath>
           <itemPath>../src/config/default/device_vectors.h</itemPath>
           <itemPath>../src/config/default/FreeRTOSConfig.h</itemPath>
-          <itemPath>../src/config/default/user.h</itemPath>
           <itemPath>../src/config/default/definitions.h</itemPath>
           <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/default/device_cache.h</itemPath>
-          <itemPath>../src/config/default/configuration.h</itemPath>
           <itemPath>../src/config/default/interrupts.h</itemPath>
           <itemPath>../src/config/default/config.h</itemPath>
+          <itemPath>../src/config/default/user.h</itemPath>
+          <itemPath>../src/config/default/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -689,10 +689,10 @@
           <itemPath>../src/config/default/startup_xc32.c</itemPath>
           <itemPath>../src/config/default/exceptions.c</itemPath>
           <itemPath>../src/config/default/freertos_hooks.c</itemPath>
-          <itemPath>../src/config/default/tasks.c</itemPath>
           <itemPath>../src/config/default/initialization.c</itemPath>
           <itemPath>../src/config/default/libc_syscalls.c</itemPath>
           <itemPath>../src/config/default/interrupts.c</itemPath>
+          <itemPath>../src/config/default/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -816,8 +816,8 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ripemd.c</itemPath>
       </logicalFolder>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -873,6 +873,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -930,6 +931,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -946,7 +948,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="40960"/>
+        <property key="heap-size" value="49152"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -969,6 +971,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -997,6 +1000,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
