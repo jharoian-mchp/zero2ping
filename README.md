@@ -65,7 +65,7 @@ The items below are needed steps to ensure that the generated project actually f
 - Add Console System Service for messaging (used SERCOM0 on pins PA04 & PA05)
 - Added static IP address in NetConfig block (instance – MAC).  Make sure this is an available IP address for your network configuration.
 - Added Debug System Service (also attached to Console) for output on why TCP/IP stack was not initializing
-- Use TCP/IP stack heap estimate to set heap for project (in System or Project Properties – linker – defaults to 1k needs 36k.  Set to 40k)
+- Use TCP/IP stack heap estimate to set heap for project (in System or Project Properties – linker – defaults to 1k needs 47k.  Set to 48k)
 - Don’t use RTC for time source (Using RTC ends up with divide by zero exception)
 - Connect pins for MAC to PHY based on schematic
 
