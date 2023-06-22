@@ -4,7 +4,7 @@
 
 
 project: zero2ping
-creation_date: 2023-06-22T16:00:24.153-07:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-06-22T16:05:15.586-07:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
@@ -19,7 +19,7 @@ modules:
     - {name: "dev_packs", version: "v3.17.0"}
     - {name: "wolfssl", version: "v4.7.0"}
     - {name: "net", version: "v3.9.2"}
-    - {name: "bsp", version: "v3.15.0"}
+    - {name: "bsp", version: "v3.16.0"}
     - {name: "crypto", version: "v3.7.6"}
     - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
 
