@@ -16,22 +16,24 @@ MPLAB Harmony has evolved over the past few years into its current state.  The f
 
 
 project: zero2ping
-creation_date: 2023-01-09T16:26:31.452-08:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-06-22T19:46:00.278-07:00[America/Los_Angeles]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.2.2
-mcc_core_version: v5.4.14
-mplabx_version: v6.05        # if MPLAB X plugin only
-harmony_version: v1.2.0
+mcc_version: v5.3.7
+mcc_core_version: v5.5.7
+mplabx_version: v6.10        # if MPLAB X plugin only
+harmony_version: v1.3.0
 compiler: XC32 (v4.21) 
 
 modules:
-    - {name: "csp", version: "v3.14.0"}
-    - {name: "core", version: "v3.11.1"}
-    - {name: "dev_packs", version: "v3.14.0"}
-    - {name: "net", version: "v3.8.0"}
-    - {name: "bsp", version: "v3.14.0"}
-    - {name: "CMSIS-FreeRTOS", version: "v10.4.6"}
+    - {name: "csp", version: "v3.17.0"}
+    - {name: "core", version: "v3.13.0"}
+    - {name: "dev_packs", version: "v3.17.0"}
+    - {name: "wolfssl", version: "v5.4.0"}
+    - {name: "net", version: "v3.9.2"}
+    - {name: "bsp", version: "v3.16.0"}
+    - {name: "crypto", version: "v3.8.0"}
+    - {name: "CMSIS-FreeRTOS", version: "v10.5.1"}
 ```
 
 One option that has always existed within MPLAB Harmony v3 is the ability to develop bare metal or with a real-time operating system (RTOS).  Zero2Ping was developed with FreeRTOS so that the application developer could utilize the RTOS for their application development as well.
