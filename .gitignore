@@ -27,3 +27,6 @@
 *.exe
 *.zip
 *.pdf
+
+# External libraries/projects
+external/
