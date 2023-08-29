@@ -10,3 +10,6 @@
 [submodule "external/harmony3/csp"]
 	path = external/harmony3/csp
 	url = https://github.com/Microchip-MPLAB-Harmony/csp
+[submodule "external/harmony3/dev_packs"]
+	path = external/harmony3/dev_packs
+	url = https://github.com/Microchip-MPLAB-Harmony/dev_packs
