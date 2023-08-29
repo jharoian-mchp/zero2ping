@@ -28,3 +28,6 @@
 [submodule "external/harmony3/CMSIS-FreeRTOS"]
 	path = external/harmony3/CMSIS-FreeRTOS
 	url = https://github.com/ARM-software/CMSIS-FreeRTOS
+[submodule "external/harmony3/Devices"]
+	path = external/harmony3/Devices
+	url = https://github.com/Microchip-MPLAB-Harmony/devices.git
