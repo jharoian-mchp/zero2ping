@@ -25,3 +25,6 @@
 [submodule "external/harmony3/CMSIS_5"]
 	path = external/harmony3/CMSIS_5
 	url = https://github.com/ARM-software/CMSIS_5
+[submodule "external/harmony3/CMSIS-FreeRTOS"]
+	path = external/harmony3/CMSIS-FreeRTOS
+	url = https://github.com/ARM-software/CMSIS-FreeRTOS
