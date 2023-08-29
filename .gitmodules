@@ -4,3 +4,6 @@
 [submodule "external/harmony3/core"]
 	path = external/harmony3/core
 	url = https://github.com/Microchip-MPLAB-Harmony/core
+[submodule "external/harmony3/crypto"]
+	path = external/harmony3/crypto
+	url = https://github.com/Microchip-MPLAB-Harmony/crypto
