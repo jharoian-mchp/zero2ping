@@ -1,3 +1,6 @@
 [submodule "external/harmony3/bsp"]
 	path = external/harmony3/bsp
 	url = https://github.com/Microchip-MPLAB-Harmony/bsp
+[submodule "external/harmony3/core"]
+	path = external/harmony3/core
+	url = https://github.com/Microchip-MPLAB-Harmony/core
