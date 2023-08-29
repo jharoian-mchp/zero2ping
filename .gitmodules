@@ -31,3 +31,6 @@
 [submodule "external/harmony3/Devices"]
 	path = external/harmony3/Devices
 	url = https://github.com/Microchip-MPLAB-Harmony/devices.git
+[submodule "external/harmony3/harmony-services"]
+	path = external/harmony3/harmony-services
+	url = https://github.com/Microchip-MPLAB-Harmony/harmony-services
