@@ -19,3 +19,6 @@
 [submodule "external/harmony3/wolfssl"]
 	path = external/harmony3/wolfssl
 	url = https://github.com/Microchip-MPLAB-Harmony/wolfssl
+[submodule "external/harmony3/quick_docs"]
+	path = external/harmony3/quick_docs
+	url = https://github.com/Microchip-MPLAB-Harmony/quick_docs
