@@ -22,3 +22,6 @@
 [submodule "external/harmony3/quick_docs"]
 	path = external/harmony3/quick_docs
 	url = https://github.com/Microchip-MPLAB-Harmony/quick_docs
+[submodule "external/harmony3/CMSIS_5"]
+	path = external/harmony3/CMSIS_5
+	url = https://github.com/ARM-software/CMSIS_5
