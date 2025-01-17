@@ -54,6 +54,8 @@ In order for this project to generate and function correctly, the following pin 
 
 ![Pin Table](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/PinTable1.png?raw=true)
 
+![PinTable2](/home/c14029/Projects/zero2ping/docs/images/PinTable2.png)
+
 ### Pin Diagram
 
 ![Pin Diagram](https://github.com/jharoian-mchp/zero2ping/blob/main/docs/images/PinDiagram.png?raw=true)
